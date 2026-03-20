@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.1",
+    "@netlify/functions": "^5.1.5",
     "@smile-cdr/fhirts": "^2.3.0",
     "axios": "^1.9.0",
     "cors": "^2.8.5",

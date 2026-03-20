@@ -1,0 +1,24 @@
+[build]
+  command = "npm install"
+  functions = "netlify/functions"
+  publish = ""
+
+[functions]
+  node_bundler = "esbuild"
+  directory = "netlify/functions"
+  included_files = ["**/*.ts", "**/tools/**/*", "**/fhir-*.ts", "**/mcp-*.ts", "**/null-*.ts", "**/IMcpTool.ts"]
+
+[[redirects]]
+  from = "/hello-world"
+  to = "/.netlify/functions/api/hello-world"
+  status = 200
+
+[[redirects]]
+  from = "/mcp"
+  to = "/.netlify/functions/api/mcp"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
