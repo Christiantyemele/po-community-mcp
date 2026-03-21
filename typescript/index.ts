@@ -17,6 +17,7 @@ switch (env) {
     break;
   default:
     allowedHosts.push("localhost");
+    allowedHosts.push("po-community-mcp-production.up.railway.app");
 }
 
 const app = createMcpExpressApp({
@@ -24,7 +25,7 @@ const app = createMcpExpressApp({
   allowedHosts,
 });
 
-const port = process.env["PORT"] || 5000;
+const port = 5000;
 
 app.use(cors());
 
