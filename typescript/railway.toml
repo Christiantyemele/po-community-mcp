@@ -6,3 +6,4 @@ dockerfilePath = "Dockerfile"
 startCommand = "npm run start"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
+healthcheckPort = 5000
